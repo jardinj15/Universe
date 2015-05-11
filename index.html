@@ -1,87 +1,393 @@
 <!DOCTYPE html>
-
-<head>
-
-
-<style>
-	
-	body 
-	{	
-		background-image: url("https://goo.gl/MAhwPZ");
-		background-size: cover;
-		left: 0;
-		margin: 0;
-		overflow: hidden;
-
-		position: fixed;
-		top: 25%;
-		left: 50%;
-		margin-top: -100px;
-		margin-left: -200px;
-	}
-
-	p 
-	{
-		font-family: "Times New Roman", times, Serif;
-		font-size:large;
-	}
-	
-	.boxed 
-	{
-		border: 2px solid white ;
-	}
-	
-	.fadein
-	{
-		position:relative; width:500px; height:332px;
-	}
-	
-	.fadein img
-	{
-		position:absolute; left:0; top:0;
-	}
-
-	</style>
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	
-	<script>
-		$(function(){
-		$('.fadein img:gt(0)').hide();
-		setInterval(function(){
-		  $('.fadein :first-child').fadeOut()
-			 .next('img').fadeIn()
-			 .end().appendTo('.fadein');}, 
-		  10000);
-		});
-	</script>
-	
+<html lang="en-US">
+    <head>
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	
-	<title>
-		My Universe
-	</title>	
 		
+		<style>
+		body {
+    background-image: url("http://www.1stwebdesigner.com/wp-content/uploads/2013/05/Course-Free-Background-Tutorial-6.jpg");
+    background-size: cover;
+}
+
+p {
+    font-family: "Times New Roman", times, Serif;
+    font-size:large;
+}
+
+.tabs {
+    	width:100%;
+    	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 45px;	
+}
+
+.tab-links {
+    display: inline-block;
+}
+
+.tab-links li {
+  border-bottom: 1px solid #636366;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+.tab-links a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.tab-links a:hover {
+    background:#a7cce5;
+    text-decoration:none;
+}
+
+li.active a, li.active a:hover {
+    background:#fff;
+    color:#4c4c4c;
+}
+
+.tab-content {
+    padding:105px;
+    border-radius:15px;
+    box-shadow:-1px 1px 1px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    background:rgba(255,255,255,0.75);
+    margin-top: 10px;
+	margin-right: 100px;
+	margin-bottom: 10px;
+	margin-left: 100px;
+}
+
+.tab {
+    display:none;
+}
+
+.tab.active {
+    display:block;
+}
+
+.menu {
+    background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
+  left: -285px;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 285px;
+}
+
+.menu ul {
+    border-top: 1px solid #636366;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    border-bottom: 1px solid #636366;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 45px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.icon-close {
+    cursor: pointer;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.icon-menu {
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.icon-menu i {
+    margin-right: 5px;
+}
+
+#menu {
+    width: 300px;
+    left: -300px;
+    position: fixed;
+
+    background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png');
+    height: 100%;
+}
+
+#menu li {
+    color: lightgray;
+    background-color: rgba(250, 250, 250, 0.3);
+    padding: 2px 2px 2px 2px;
+    margin: 5px 0px 5px 0px;
+    list-style: none; // removes bullets
+    border-bottom: 1px solid #636366;
+}
+
+#menu-tab {
+    float: left;
+    border: 2px solid;
+    border-radius: 25px;
+    background-color: lightgray;
+}
+/*
+/* Initial body *//*
+body {
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Initial menu *//*
+.menu {
+  background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
+  left: -285px;  /* start off behind the scenes *//*
+  height: 100%;
+  position: fixed;
+  width: 285px;
+}
+
+*//* Basic styling *//*
+
+.jumbotron {
+  background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/bg.png'); 
+  height: 100%;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+.menu ul {
+  border-top: 1px solid #636366;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #636366;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-close {
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.icon-menu {
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-menu i {
+  margin-right: 5px;
+}
+*/
+
+		</style>
+        
+		<script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery(".tabs .tab-links a").on("click", function (evt) {
+                    var currentHref = jQuery(this).attr("href");
+
+                    jQuery(".tab-content " + currentHref).siblings().slideUp(400);
+
+                    jQuery(".tab-content " + currentHref).delay(400).slideDown(400);
+
+                    jQuery(this).parent("li").addClass("active").siblings().removeClass("active");
+
+                    changeTitle(jQuery(this).html());
+
+                    evt.preventDefault();
+                });
+            });
+
+            function changeTitle(newTitle) {
+                var titleElem = document.getElementById("title");
+                titleElem.innerHTML = newTitle;
+            }
+        </script>
+
+        <script type="text/javascript">
+            function animateBySelector(elementReference, time, properties) {
+                jQuery(elementReference).animate(properties, time);
+            }
+
+            function animateByElement(element, time, properties) {
+                animateBySelector("#" + element.id, time, properties);
+            }
+
+            function toggleBySelector(elementReference, time) {
+                var props = {
+                    width: "toggle"
+                };
+
+                animateBySelector(elementReference, time, props);
+            }
+
+            function moveElement(elementReference, time, newLeft, newTop) {
+                jQuery(elementReference).animate({
+                    left: newLeft,
+                    top: newTop
+                }, time);
+            }
+
+            function hideMenu() {
+                moveElement("#menu", 500, -300, 0);
+            }
+
+            function showMenu() {
+                moveElement("#menu", 500, 0, 0);
+            }
+
+            jQuery(document).ready(function () {
+                jQuery("#menu-tab").mousedown(function () {
+                    showMenu();
+                });
+
+                jQuery("#menu").mouseleave(function () {
+                    hideMenu();
+                });
+            });
+        </script>
+		
+		<script type="text/javascript">
+		var main = function() {
+		  /* Push the body and the nav over by 285px over */
+		  $('.icon-menu').click(function() {
+			$('.menu').animate({
+			  left: "0px"
+			}, 200);
+
+			$('body').animate({
+			  left: "285px"
+			}, 200);
+		  });
+
+		  /* Then push them back */
+		  $('.icon-close').click(function() {
+			$('.menu').animate({
+			  left: "-285px"
+			}, 200);
+
+			$('body').animate({
+			  left: "0px"
+			}, 200);
+		  });
+		};
+
+
+		$(document).ready(main);
+</script>
+
+        <title id="title">Index</title>
     </head>
-    
-	<body>
-		<a href="https://www.youtube.com/watch?v=c9X5kvVLpWQ"><img border="0" alt="Universe" src="http://i.imgur.com/FuIBiMa.png" width="100" height="100"></a>
-	
-		<div class="fadein">
-			<!--Pillars of creation-->
-			<img src="http://i.imgur.com/J0IK9Ng.png">
-			<!--Sombrero-->
-			<img src="http://i.imgur.com/YSKorkt.png">
-			<!--Quasar-->
-			<img src="http://i.imgur.com/DbZShTJ.png">
+    <body>
+        <div id="menu-tab">
+            <img src="http://i.imgur.com/QtVZCMt.png" alt="Menu" height="42" width="42">
+        </div>
+
+        <div id="menu" class="tabs">
+            <ul class="tab-links">
+                <li class="active"><a href="#P1">Page 1</a></li>
+                <li><a href="#P2">Page 2</a></li>
+                <li><a href="#P3">Page 3</a></li>
+                <li><a href="#P4">Page 4</a></li>
+                <li><a href="#P5">Page 5</a></li>
+				<li><a href="#P6">Page 6</a></li>
+            </ul>
+        </div>
+
+        <div class="tab-content">
+		
+            <div id="P1" class="tab active">
+                <h1>Welcome!</h1>
+				<p>This site is a display of a few astrnomical items that i enjoy.</p>
+				<p>I hope you enjoy as well.</p>				
+            </div>
+
+            <div id="P2" class="tab">
+				<h2>Pillars of Creation</h2>
+                <img src="http://i.dailymail.co.uk/i/pix/2015/01/06/video-undefined-2470493D00000578-309_636x358.jpg" align="center">
+				<p>The Pillars of Creation. These were three gas and dust cloud, each of the fingers was larger than our solar system, in the process fo creating a new star.</p> 
+				<p>Evidence shows that they were wiped out a few milenia ago and will only be visable for the next thousand years.</p>
+				
+            </div>
+
+            <div id="P3" class="tab">
+				<h2>Large Quasar Group</h2>
+                <img src="http://jamesminshall.com/wp-content/uploads/2013/01/jmm-quasar-pulse.gif" align="center">
+				<p>This quasar group is interesting because it's size defies modern astrological theory.</p>
+            </div>
+
+            <div id="P4" class="tab">
+				<h2>Sombrero Galexy</h2>
+                <img src="http://www.sfmoma.org/images/artwork/medium/ph99368.jpg" align="center">
+				<p>Named for its similarity to the hat. I chose this object because a friend of mine's nickname is Sombrero.</p>
+            </div>
+
+            <div id="P5" class="tab">
+				<h2>Black Hole at the Center Of the Milky Way</h2>
+				<img src="http://i.space.com/images/i/000/013/375/i02/black-hole-02.jpg?1321460178" align="center">
+				<p>I chose our Black hole because of the fact that it was just recently that we had hard evidence that it existed.</p>
+				<p>I also enjoy the mystey surrounding Black Holes.</p>
+            </div>
+			
+			<div id="P6" class="tab">
+				<h2>Dark Matter</h2>
+				<img src="http://i.dailymail.co.uk/i/pix/2014/10/10/1412938015963_Image_galleryImage_This_image_provided_by_th.JPG" align="center">
+				<p> Dark Matter is very mysterious but it is believed to be the "stuff" that fills most "empty" space.</p>
+				<p>I personally belive that Dark Matter holds the secret to understanding the Big Bang.</p>
+				
+			</div>
+        
 		</div>
-	
-	
-	
-	</body>
-	
+    </div>
+</body>
 </html>
