@@ -7,6 +7,9 @@ p {
     font-family: "Times New Roman", times, Serif;
     font-size:large;
 }
+ol{
+	text-align: left;
+}
 
 .tabs {
     	width:100%;
