@@ -8,230 +8,8 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		
-		<style>
-		body {
-    background-image: url("http://www.1stwebdesigner.com/wp-content/uploads/2013/05/Course-Free-Background-Tutorial-6.jpg");
-    background-size: cover;
-}
 
-p {
-    font-family: "Times New Roman", times, Serif;
-    font-size:large;
-}
-
-.tabs {
-    	width:100%;
-    	text-align: center;
-	font-family: 'Open Sans', sans-serif;
-	line-height: 45px;	
-}
-
-.tab-links {
-    display: inline-block;
-}
-
-.tab-links li {
-  border-bottom: 1px solid #636366;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 45px;
-  padding-bottom: 3px;
-  padding-left: 20px;
-  padding-top: 3px;
-}
-
-.tab-links a {
-  color: #fff;
-  font-size: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.tab-links a:hover {
-    background:#a7cce5;
-    text-decoration:none;
-}
-
-li.active a, li.active a:hover {
-    background:#fff;
-    color:#4c4c4c;
-}
-
-.tab-content {
-    padding:105px;
-    border-radius:15px;
-    box-shadow:-1px 1px 1px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    background:rgba(255,255,255,0.75);
-    margin-top: 10px;
-	margin-right: 100px;
-	margin-bottom: 10px;
-	margin-left: 100px;
-}
-
-.tab {
-    display:none;
-}
-
-.tab.active {
-    display:block;
-}
-
-.menu {
-    background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
-  left: -285px;  /* start off behind the scenes */
-  height: 100%;
-  position: fixed;
-  width: 285px;
-}
-
-.menu ul {
-    border-top: 1px solid #636366;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu li {
-    border-bottom: 1px solid #636366;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 45px;
-    padding-bottom: 3px;
-    padding-left: 20px;
-    padding-top: 3px;
-}
-
-.menu a {
-    color: #fff;
-    font-size: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.icon-close {
-    cursor: pointer;
-    padding-left: 10px;
-    padding-top: 10px;
-}
-
-.icon-menu {
-    color: #fff;
-    cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    padding-bottom: 25px;
-    padding-left: 25px;
-    padding-top: 25px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.icon-menu i {
-    margin-right: 5px;
-}
-
-#menu {
-    width: 300px;
-    left: -300px;
-    position: fixed;
-
-    background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png');
-    height: 100%;
-}
-
-#menu li {
-    color: lightgray;
-    background-color: rgba(250, 250, 250, 0.3);
-    padding: 2px 2px 2px 2px;
-    margin: 5px 0px 5px 0px;
-    list-style: none; // removes bullets
-    border-bottom: 1px solid #636366;
-}
-
-#menu-tab {
-    float: left;
-    border: 2px solid;
-    border-radius: 25px;
-    background-color: lightgray;
-}
-/*
-/* Initial body *//*
-body {
-  left: 0;
-  margin: 0;
-  overflow: hidden;
-  position: relative;
-}
-
-/* Initial menu *//*
-.menu {
-  background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
-  left: -285px;  /* start off behind the scenes *//*
-  height: 100%;
-  position: fixed;
-  width: 285px;
-}
-
-*//* Basic styling *//*
-
-.jumbotron {
-  background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/bg.png'); 
-  height: 100%;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-}
-
-.menu ul {
-  border-top: 1px solid #636366;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  border-bottom: 1px solid #636366;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 45px;
-  padding-bottom: 3px;
-  padding-left: 20px;
-  padding-top: 3px;
-}
-
-.menu a {
-  color: #fff;
-  font-size: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.icon-close {
-  cursor: pointer;
-  padding-left: 10px;
-  padding-top: 10px;
-}
-
-.icon-menu {
-  color: #fff;
-  cursor: pointer;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  padding-top: 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.icon-menu i {
-  margin-right: 5px;
-}
-*/
-
-		</style>
-        
-		<script type="text/javascript">
+        <script type="text/javascript">
             jQuery(document).ready(function () {
                 jQuery(".tabs .tab-links a").on("click", function (evt) {
                     var currentHref = jQuery(this).attr("href");
@@ -296,98 +74,71 @@ body {
                 });
             });
         </script>
-		
-		<script type="text/javascript">
-		var main = function() {
-		  /* Push the body and the nav over by 285px over */
-		  $('.icon-menu').click(function() {
-			$('.menu').animate({
-			  left: "0px"
-			}, 200);
-
-			$('body').animate({
-			  left: "285px"
-			}, 200);
-		  });
-
-		  /* Then push them back */
-		  $('.icon-close').click(function() {
-			$('.menu').animate({
-			  left: "-285px"
-			}, 200);
-
-			$('body').animate({
-			  left: "0px"
-			}, 200);
-		  });
-		};
-
-
-		$(document).ready(main);
-</script>
 
         <title id="title">Index</title>
     </head>
     <body>
         <div id="menu-tab">
-            <img src="http://i.imgur.com/QtVZCMt.png" alt="Menu" height="42" width="42">
+            <img src="http://i.imgur.com/QtVZCMt.png" height="42" width="42">
         </div>
 
         <div id="menu" class="tabs">
             <ul class="tab-links">
-                <li class="active"><a href="#P1">Page 1</a></li>
-                <li><a href="#P2">Page 2</a></li>
-                <li><a href="#P3">Page 3</a></li>
-                <li><a href="#P4">Page 4</a></li>
-                <li><a href="#P5">Page 5</a></li>
-				<li><a href="#P6">Page 6</a></li>
+                <li class="active"><a href="#index">Index</a></li>
+                <li><a href="#0039">Intro</a></li>
+                <li><a href="#4069">Task</a></li>
+                <li><a href="#7099">Process</a></li>
+                <li><a href="#cita">Resources</a></li>
+                <li><a href="#Conc">Conclusion</a></li>
             </ul>
         </div>
 
         <div class="tab-content">
-		
-            <div id="P1" class="tab active">
-                <h1>Welcome!</h1>
-				<p>This site is a display of a few astrnomical items that i enjoy.</p>
-				<p>I hope you enjoy as well.</p>				
+            <div id="index" class="tab active">
+                <h1>Across The Universe</h1>
+                <p>This webquest is recomended for high school students.</p>
+                <p>by: Jameson Jardin</p>
+                <img src="~~~" align="center">
             </div>
 
-            <div id="P2" class="tab">
-				<h2>Pillars of Creation</h2>
-                <img src="http://i.dailymail.co.uk/i/pix/2015/01/06/video-undefined-2470493D00000578-309_636x358.jpg" align="center">
-				<p>The Pillars of Creation. These were three gas and dust cloud, each of the fingers was larger than our solar system, in the process fo creating a new star.</p> 
-				<p>Evidence shows that they were wiped out a few milenia ago and will only be visable for the next thousand years.</p>
-				
+            <div id="0039" class="tab">
+               <h1>A webquest to the universe</h1>
+               <p>In this webquest you will use interactive websites to explore the universe. as a task you will be presented with a worksheet that you will write down 15 interesting facts that can be used later</p>
+               <p>The big question: How much do you actually know about the universe?</p>
             </div>
 
-            <div id="P3" class="tab">
-				<h2>Large Quasar Group</h2>
-                <img src="http://jamesminshall.com/wp-content/uploads/2013/01/jmm-quasar-pulse.gif" align="center">
-				<p>This quasar group is interesting because it's size defies modern astrological theory.</p>
+            <div id="4069" class="tab">
+                <p>by the end of this webquest you will have a better understanding of the universe you live in and will create an "our map" of the things you've learned.</p>
+                <p>The "Our map" will be either a powerpoint or a prezi.</p>
             </div>
 
-            <div id="P4" class="tab">
-				<h2>Sombrero Galexy</h2>
-                <img src="http://www.sfmoma.org/images/artwork/medium/ph99368.jpg" align="center">
-				<p>Named for its similarity to the hat. I chose this object because a friend of mine's nickname is Sombrero.</p>
+            <div id="7099" class="tab">
+				<ol>
+					<li>First, you will be assigned to a team of three</li>
+					<li>Then you will be given the worksheet to complete</li>
+					<li>Next, assign the roles each of you will play</li>
+					<li>The navigator will follow the links to the resources provided</li>
+					<li>The writer will record the fifteen facts the group finds together on the website</li>
+					<li>the imager will find images relating to each fact.</li>
+				</ol>
             </div>
 
-            <div id="P5" class="tab">
-				<h2>Black Hole at the Center Of the Milky Way</h2>
-				<img src="http://i.space.com/images/i/000/013/375/i02/black-hole-02.jpg?1321460178" align="center">
-				<p>I chose our Black hole because of the fact that it was just recently that we had hard evidence that it existed.</p>
-				<p>I also enjoy the mystey surrounding Black Holes.</p>
+            <div id="cita" class="tab">
+				<a href="http://htwins.net/scale2/">Log scale of the Universe, with clickable objects</a>
+				<a href="http://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html">an accurate depiction of the solar system based on if the moon were a single pixel</a>
+				<a href="http://www.history.com/interactives/interactive-universe">a 3d flythrough of the solar system and other bodies of the universe</a>
             </div>
-			
-			<div id="P6" class="tab">
-				<h2>Dark Matter</h2>
-				<img src="http://i.dailymail.co.uk/i/pix/2014/10/10/1412938015963_Image_galleryImage_This_image_provided_by_th.JPG" align="center">
-				<p> Dark Matter is very mysterious but it is believed to be the "stuff" that fills most "empty" space.</p>
-				<p>I personally belive that Dark Matter holds the secret to understanding the Big Bang.</p>
-				
-			</div>
-        
-		</div>
+            
+            <div id="conc" class="tab">
+				<p>By completing this webquest, you will be able to share with the class what you have learned through a Power Point or Prezi. Be sure to share your opinions on what you found</p>
+				<p>Citations</p>
+				<ol>
+					<li>http://www.history.com/interactives/interactive-universe</li>
+					<li>http://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html</li>
+					<li>http://htwins.net/scale2/</li>
+				</ol>
+            </div>
+        </div>
     </div>
 </body>
 </html>
